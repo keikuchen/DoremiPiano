@@ -1,0 +1,128 @@
+[
+    {
+        "id": 67,
+        "audioName": "67soA3",
+        "audioPitch": 69,
+        "defaultRole": 67
+    },
+    {
+        "id": 68,
+        "audioName": "68saA3",
+        "audioPitch": 69,
+        "defaultRole": 68
+    },
+    {
+        "id": 69,
+        "audioName": "69laA3",
+        "audioPitch": 69,
+        "defaultRole": 69
+    },
+    {
+        "id": 70,
+        "audioName": "70chiA3",
+        "audioPitch": 69,
+        "defaultRole": 70
+    },
+    {
+        "id": 71,
+        "audioName": "71siC#4",
+        "audioPitch": 73,
+        "defaultRole": 71
+    },
+    {
+        "id": 72,
+        "audioName": "72doC#4",
+        "audioPitch": 73,
+        "defaultRole": 72
+    },
+    {
+        "id": 73,
+        "audioName": "73deC#4",
+        "audioPitch": 73,
+        "defaultRole": 73
+    },
+    {
+        "id": 74,
+        "audioName": "74reC#4",
+        "audioPitch": 73,
+        "defaultRole": 74
+    },
+    {
+        "id": 75,
+        "audioName": "75riC#4",
+        "audioPitch": 73,
+        "defaultRole": 75
+    },
+    {
+        "id": 76,
+        "audioName": "76miF4",
+        "audioPitch": 77,
+        "defaultRole": 76
+    },
+    {
+        "id": 77,
+        "audioName": "77faF4",
+        "audioPitch": 77,
+        "defaultRole": 77
+    },
+    {
+        "id": 78,
+        "audioName": "78fiF4",
+        "audioPitch": 77,
+        "defaultRole": 78
+    },
+    {
+        "id": 79,
+        "audioName": "79soF4",
+        "audioPitch": 77,
+        "defaultRole": 79
+    },
+    {
+        "id": 80,
+        "audioName": "80saA4",
+        "audioPitch": 81,
+        "defaultRole": 80
+    },
+    {
+        "id": 81,
+        "audioName": "81laA4",
+        "audioPitch": 81,
+        "defaultRole": 81
+    },
+    {
+        "id": 82,
+        "audioName": "82chiA4",
+        "audioPitch": 81,
+        "defaultRole": 82
+    },
+    {
+        "id": 83,
+        "audioName": "83siA4",
+        "audioPitch": 81,
+        "defaultRole": 83
+    },
+    {
+        "id": 84,
+        "audioName": "84doC#5",
+        "audioPitch": 85,
+        "defaultRole": 84
+    },
+    {
+        "id": 85,
+        "audioName": "85deC#5",
+        "audioPitch": 85,
+        "defaultRole": 85
+    },
+    {
+        "id": 86,
+        "audioName": "86reC#5",
+        "audioPitch": 85,
+        "defaultRole": 86
+    },
+    {
+        "id": 87,
+        "audioName": "87riC#5",
+        "audioPitch": 85,
+        "defaultRole": 87
+    }
+]

@@ -7,18 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0614F06E248E44F30084AD95 /* ド.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F062248E44F20084AD95 /* ド.wav */; };
-		0614F06F248E44F30084AD95 /* チ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F063248E44F20084AD95 /* チ.wav */; };
-		0614F070248E44F30084AD95 /* ソ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F064248E44F20084AD95 /* ソ.wav */; };
-		0614F071248E44F30084AD95 /* ファ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F065248E44F20084AD95 /* ファ.wav */; };
-		0614F072248E44F30084AD95 /* ミ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F066248E44F20084AD95 /* ミ.wav */; };
-		0614F073248E44F30084AD95 /* フィ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F067248E44F20084AD95 /* フィ.wav */; };
-		0614F074248E44F30084AD95 /* シ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F068248E44F20084AD95 /* シ.wav */; };
-		0614F075248E44F30084AD95 /* リ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F069248E44F30084AD95 /* リ.wav */; };
-		0614F076248E44F30084AD95 /* レ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F06A248E44F30084AD95 /* レ.wav */; };
-		0614F077248E44F30084AD95 /* サ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F06B248E44F30084AD95 /* サ.wav */; };
-		0614F078248E44F30084AD95 /* ラ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F06C248E44F30084AD95 /* ラ.wav */; };
-		0614F079248E44F30084AD95 /* デ.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0614F06D248E44F30084AD95 /* デ.wav */; };
+		0660B87F2499711F00FD954B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660B87E2499711F00FD954B /* Note.swift */; };
+		0660B8822499E37500FD954B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660B8812499E37500FD954B /* Data.swift */; };
+		0660B8852499E42C00FD954B /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0660B8842499E42C00FD954B /* UserData.swift */; };
+		0663B6BB249C8BDD00B8E31A /* noteData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0660B88024998DAE00FD954B /* noteData.json */; };
+		0663B6BD249C992300B8E31A /* KeyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0663B6BC249C992300B8E31A /* KeyInfo.swift */; };
+		0663B6EA249CC24800B8E31A /* 84doC#5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6D6249CC24600B8E31A /* 84doC#5.wav */; };
+		0663B6EB249CC24800B8E31A /* 70chiA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6D7249CC24600B8E31A /* 70chiA3.wav */; };
+		0663B6ED249CC24800B8E31A /* 79soF4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6D9249CC24600B8E31A /* 79soF4.wav */; };
+		0663B6EE249CC24800B8E31A /* 72doC#4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6DA249CC24600B8E31A /* 72doC#4.wav */; };
+		0663B6EF249CC24800B8E31A /* 77faF4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6DB249CC24600B8E31A /* 77faF4.wav */; };
+		0663B6F0249CC24800B8E31A /* 73deC#4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6DC249CC24600B8E31A /* 73deC#4.wav */; };
+		0663B6F1249CC24800B8E31A /* 78fiF4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6DD249CC24600B8E31A /* 78fiF4.wav */; };
+		0663B6F2249CC24800B8E31A /* 69laA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6DE249CC24600B8E31A /* 69laA3.wav */; };
+		0663B6F3249CC24800B8E31A /* 81laA4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6DF249CC24600B8E31A /* 81laA4.wav */; };
+		0663B6F4249CC24800B8E31A /* 75riC#4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E0249CC24600B8E31A /* 75riC#4.wav */; };
+		0663B6F5249CC24800B8E31A /* 82chiA4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E1249CC24700B8E31A /* 82chiA4.wav */; };
+		0663B6F6249CC24800B8E31A /* 76miF4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E2249CC24700B8E31A /* 76miF4.wav */; };
+		0663B6F7249CC24800B8E31A /* 87riC#5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E3249CC24700B8E31A /* 87riC#5.wav */; };
+		0663B6F8249CC24800B8E31A /* 83siA4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E4249CC24700B8E31A /* 83siA4.wav */; };
+		0663B6F9249CC24800B8E31A /* 71siA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E5249CC24700B8E31A /* 71siA3.wav */; };
+		0663B6FA249CC24800B8E31A /* 80saA4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E6249CC24700B8E31A /* 80saA4.wav */; };
+		0663B6FB249CC24800B8E31A /* 86reC#5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E7249CC24700B8E31A /* 86reC#5.wav */; };
+		0663B6FC249CC24800B8E31A /* 74reC#4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E8249CC24700B8E31A /* 74reC#4.wav */; };
+		0663B6FD249CC24800B8E31A /* 85deC#5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6E9249CC24700B8E31A /* 85deC#5.wav */; };
+		0663B700249CC3D500B8E31A /* 67soA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6FE249CC3D500B8E31A /* 67soA3.wav */; };
+		0663B701249CC3D500B8E31A /* 68saA3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B6FF249CC3D500B8E31A /* 68saA3.wav */; };
+		0663B703249CC72C00B8E31A /* 71siC#4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0663B702249CC72C00B8E31A /* 71siC#4.wav */; };
 		06758ACC248A2CB300D4E0D2 /* TestCustomTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06758ACB248A2CB300D4E0D2 /* TestCustomTapGesture.swift */; };
 		06BF497B247E53B300584858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF497A247E53B300584858 /* AppDelegate.swift */; };
 		06BF497D247E53B300584858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF497C247E53B300584858 /* SceneDelegate.swift */; };
@@ -26,8 +41,10 @@
 		06BF4981247E53B500584858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4980247E53B500584858 /* Assets.xcassets */; };
 		06BF4984247E53B500584858 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4983247E53B500584858 /* Preview Assets.xcassets */; };
 		06BF4987247E53B500584858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4985247E53B500584858 /* LaunchScreen.storyboard */; };
-		06BF4992247E53B500584858 /* DoremiPianoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF4991247E53B500584858 /* DoremiPianoTests.swift */; };
 		06BF499D247E53B500584858 /* DoremiPianoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF499C247E53B500584858 /* DoremiPianoUITests.swift */; };
+		06E1DD9D248F91CF008D6562 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1DD9C248F91CF008D6562 /* Key.swift */; };
+		06E1DDE424904F7E008D6562 /* DoremiPianoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1DDE324904F7E008D6562 /* DoremiPianoTests.swift */; };
+		06E1DEB42493512E008D6562 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1DEB32493512E008D6562 /* AudioEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,18 +65,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0614F062248E44F20084AD95 /* ド.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ド.wav"; sourceTree = "<group>"; };
-		0614F063248E44F20084AD95 /* チ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "チ.wav"; sourceTree = "<group>"; };
-		0614F064248E44F20084AD95 /* ソ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ソ.wav"; sourceTree = "<group>"; };
-		0614F065248E44F20084AD95 /* ファ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ファ.wav"; sourceTree = "<group>"; };
-		0614F066248E44F20084AD95 /* ミ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ミ.wav"; sourceTree = "<group>"; };
-		0614F067248E44F20084AD95 /* フィ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "フィ.wav"; sourceTree = "<group>"; };
-		0614F068248E44F20084AD95 /* シ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "シ.wav"; sourceTree = "<group>"; };
-		0614F069248E44F30084AD95 /* リ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "リ.wav"; sourceTree = "<group>"; };
-		0614F06A248E44F30084AD95 /* レ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "レ.wav"; sourceTree = "<group>"; };
-		0614F06B248E44F30084AD95 /* サ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "サ.wav"; sourceTree = "<group>"; };
-		0614F06C248E44F30084AD95 /* ラ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "ラ.wav"; sourceTree = "<group>"; };
-		0614F06D248E44F30084AD95 /* デ.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "デ.wav"; sourceTree = "<group>"; };
+		0660B87E2499711F00FD954B /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		0660B88024998DAE00FD954B /* noteData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = noteData.json; sourceTree = "<group>"; };
+		0660B8812499E37500FD954B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		0660B8842499E42C00FD954B /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		0663B6BC249C992300B8E31A /* KeyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyInfo.swift; sourceTree = "<group>"; };
+		0663B6D6249CC24600B8E31A /* 84doC#5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "84doC#5.wav"; sourceTree = "<group>"; };
+		0663B6D7249CC24600B8E31A /* 70chiA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 70chiA3.wav; sourceTree = "<group>"; };
+		0663B6D9249CC24600B8E31A /* 79soF4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 79soF4.wav; sourceTree = "<group>"; };
+		0663B6DA249CC24600B8E31A /* 72doC#4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "72doC#4.wav"; sourceTree = "<group>"; };
+		0663B6DB249CC24600B8E31A /* 77faF4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 77faF4.wav; sourceTree = "<group>"; };
+		0663B6DC249CC24600B8E31A /* 73deC#4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "73deC#4.wav"; sourceTree = "<group>"; };
+		0663B6DD249CC24600B8E31A /* 78fiF4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 78fiF4.wav; sourceTree = "<group>"; };
+		0663B6DE249CC24600B8E31A /* 69laA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 69laA3.wav; sourceTree = "<group>"; };
+		0663B6DF249CC24600B8E31A /* 81laA4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 81laA4.wav; sourceTree = "<group>"; };
+		0663B6E0249CC24600B8E31A /* 75riC#4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "75riC#4.wav"; sourceTree = "<group>"; };
+		0663B6E1249CC24700B8E31A /* 82chiA4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 82chiA4.wav; sourceTree = "<group>"; };
+		0663B6E2249CC24700B8E31A /* 76miF4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 76miF4.wav; sourceTree = "<group>"; };
+		0663B6E3249CC24700B8E31A /* 87riC#5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "87riC#5.wav"; sourceTree = "<group>"; };
+		0663B6E4249CC24700B8E31A /* 83siA4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 83siA4.wav; sourceTree = "<group>"; };
+		0663B6E5249CC24700B8E31A /* 71siA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 71siA3.wav; sourceTree = "<group>"; };
+		0663B6E6249CC24700B8E31A /* 80saA4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 80saA4.wav; sourceTree = "<group>"; };
+		0663B6E7249CC24700B8E31A /* 86reC#5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "86reC#5.wav"; sourceTree = "<group>"; };
+		0663B6E8249CC24700B8E31A /* 74reC#4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "74reC#4.wav"; sourceTree = "<group>"; };
+		0663B6E9249CC24700B8E31A /* 85deC#5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "85deC#5.wav"; sourceTree = "<group>"; };
+		0663B6FE249CC3D500B8E31A /* 67soA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 67soA3.wav; sourceTree = "<group>"; };
+		0663B6FF249CC3D500B8E31A /* 68saA3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 68saA3.wav; sourceTree = "<group>"; };
+		0663B702249CC72C00B8E31A /* 71siC#4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "71siC#4.wav"; sourceTree = "<group>"; };
 		06758ACB248A2CB300D4E0D2 /* TestCustomTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCustomTapGesture.swift; sourceTree = "<group>"; };
 		06BF4977247E53B300584858 /* DoremiPiano.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoremiPiano.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF497A247E53B300584858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,11 +102,13 @@
 		06BF4986247E53B500584858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06BF4988247E53B500584858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BF498D247E53B500584858 /* DoremiPianoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoremiPianoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		06BF4991247E53B500584858 /* DoremiPianoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoremiPianoTests.swift; sourceTree = "<group>"; };
 		06BF4993247E53B500584858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06BF4998247E53B500584858 /* DoremiPianoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoremiPianoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		06BF499C247E53B500584858 /* DoremiPianoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoremiPianoUITests.swift; sourceTree = "<group>"; };
 		06BF499E247E53B500584858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06E1DD9C248F91CF008D6562 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		06E1DDE324904F7E008D6562 /* DoremiPianoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoremiPianoTests.swift; sourceTree = "<group>"; };
+		06E1DEB32493512E008D6562 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,20 +139,41 @@
 		0614F07A248E45D90084AD95 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0614F06B248E44F30084AD95 /* サ.wav */,
-				0614F068248E44F20084AD95 /* シ.wav */,
-				0614F064248E44F20084AD95 /* ソ.wav */,
-				0614F063248E44F20084AD95 /* チ.wav */,
-				0614F06D248E44F30084AD95 /* デ.wav */,
-				0614F062248E44F20084AD95 /* ド.wav */,
-				0614F065248E44F20084AD95 /* ファ.wav */,
-				0614F067248E44F20084AD95 /* フィ.wav */,
-				0614F066248E44F20084AD95 /* ミ.wav */,
-				0614F06C248E44F30084AD95 /* ラ.wav */,
-				0614F069248E44F30084AD95 /* リ.wav */,
-				0614F06A248E44F30084AD95 /* レ.wav */,
+				0660B88024998DAE00FD954B /* noteData.json */,
+				0663B6FE249CC3D500B8E31A /* 67soA3.wav */,
+				0663B6FF249CC3D500B8E31A /* 68saA3.wav */,
+				0663B6DE249CC24600B8E31A /* 69laA3.wav */,
+				0663B6D7249CC24600B8E31A /* 70chiA3.wav */,
+				0663B6E5249CC24700B8E31A /* 71siA3.wav */,
+				0663B702249CC72C00B8E31A /* 71siC#4.wav */,
+				0663B6DA249CC24600B8E31A /* 72doC#4.wav */,
+				0663B6DC249CC24600B8E31A /* 73deC#4.wav */,
+				0663B6E8249CC24700B8E31A /* 74reC#4.wav */,
+				0663B6E0249CC24600B8E31A /* 75riC#4.wav */,
+				0663B6E2249CC24700B8E31A /* 76miF4.wav */,
+				0663B6DB249CC24600B8E31A /* 77faF4.wav */,
+				0663B6DD249CC24600B8E31A /* 78fiF4.wav */,
+				0663B6D9249CC24600B8E31A /* 79soF4.wav */,
+				0663B6E6249CC24700B8E31A /* 80saA4.wav */,
+				0663B6DF249CC24600B8E31A /* 81laA4.wav */,
+				0663B6E1249CC24700B8E31A /* 82chiA4.wav */,
+				0663B6E4249CC24700B8E31A /* 83siA4.wav */,
+				0663B6D6249CC24600B8E31A /* 84doC#5.wav */,
+				0663B6E9249CC24700B8E31A /* 85deC#5.wav */,
+				0663B6E7249CC24700B8E31A /* 86reC#5.wav */,
+				0663B6E3249CC24700B8E31A /* 87riC#5.wav */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		0660B8832499E3C900FD954B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0660B8812499E37500FD954B /* Data.swift */,
+				0660B8842499E42C00FD954B /* UserData.swift */,
+				0660B87E2499711F00FD954B /* Note.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		06BF496E247E53B300584858 = {
@@ -144,15 +199,19 @@
 		06BF4979247E53B300584858 /* DoremiPiano */ = {
 			isa = PBXGroup;
 			children = (
-				0614F07A248E45D90084AD95 /* Resources */,
+				06BF4988247E53B500584858 /* Info.plist */,
 				06BF497A247E53B300584858 /* AppDelegate.swift */,
 				06BF497C247E53B300584858 /* SceneDelegate.swift */,
+				06E1DEB32493512E008D6562 /* AudioEngine.swift */,
 				06BF497E247E53B300584858 /* ContentView.swift */,
+				06E1DD9C248F91CF008D6562 /* Key.swift */,
+				0663B6BC249C992300B8E31A /* KeyInfo.swift */,
 				06758ACB248A2CB300D4E0D2 /* TestCustomTapGesture.swift */,
 				06BF4980247E53B500584858 /* Assets.xcassets */,
 				06BF4985247E53B500584858 /* LaunchScreen.storyboard */,
-				06BF4988247E53B500584858 /* Info.plist */,
+				0660B8832499E3C900FD954B /* Models */,
 				06BF4982247E53B500584858 /* Preview Content */,
+				0614F07A248E45D90084AD95 /* Resources */,
 			);
 			path = DoremiPiano;
 			sourceTree = "<group>";
@@ -168,7 +227,7 @@
 		06BF4990247E53B500584858 /* DoremiPianoTests */ = {
 			isa = PBXGroup;
 			children = (
-				06BF4991247E53B500584858 /* DoremiPianoTests.swift */,
+				06E1DDE324904F7E008D6562 /* DoremiPianoTests.swift */,
 				06BF4993247E53B500584858 /* Info.plist */,
 			);
 			path = DoremiPianoTests;
@@ -253,6 +312,7 @@
 					};
 					06BF498C247E53B500584858 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 						TestTargetID = 06BF4976247E53B300584858;
 					};
 					06BF4997247E53B500584858 = {
@@ -286,21 +346,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0614F079248E44F30084AD95 /* デ.wav in Resources */,
-				0614F075248E44F30084AD95 /* リ.wav in Resources */,
-				0614F072248E44F30084AD95 /* ミ.wav in Resources */,
-				0614F078248E44F30084AD95 /* ラ.wav in Resources */,
-				0614F070248E44F30084AD95 /* ソ.wav in Resources */,
-				0614F074248E44F30084AD95 /* シ.wav in Resources */,
+				0663B703249CC72C00B8E31A /* 71siC#4.wav in Resources */,
+				0663B700249CC3D500B8E31A /* 67soA3.wav in Resources */,
+				0663B701249CC3D500B8E31A /* 68saA3.wav in Resources */,
+				0663B6EA249CC24800B8E31A /* 84doC#5.wav in Resources */,
+				0663B6EB249CC24800B8E31A /* 70chiA3.wav in Resources */,
+				0663B6ED249CC24800B8E31A /* 79soF4.wav in Resources */,
+				0663B6EE249CC24800B8E31A /* 72doC#4.wav in Resources */,
+				0663B6EF249CC24800B8E31A /* 77faF4.wav in Resources */,
+				0663B6F0249CC24800B8E31A /* 73deC#4.wav in Resources */,
+				0663B6F1249CC24800B8E31A /* 78fiF4.wav in Resources */,
+				0663B6F2249CC24800B8E31A /* 69laA3.wav in Resources */,
+				0663B6F3249CC24800B8E31A /* 81laA4.wav in Resources */,
+				0663B6F4249CC24800B8E31A /* 75riC#4.wav in Resources */,
+				0663B6F5249CC24800B8E31A /* 82chiA4.wav in Resources */,
+				0663B6F6249CC24800B8E31A /* 76miF4.wav in Resources */,
+				0663B6F7249CC24800B8E31A /* 87riC#5.wav in Resources */,
+				0663B6F8249CC24800B8E31A /* 83siA4.wav in Resources */,
+				0663B6F9249CC24800B8E31A /* 71siA3.wav in Resources */,
+				0663B6FA249CC24800B8E31A /* 80saA4.wav in Resources */,
+				0663B6FB249CC24800B8E31A /* 86reC#5.wav in Resources */,
+				0663B6FC249CC24800B8E31A /* 74reC#4.wav in Resources */,
+				0663B6FD249CC24800B8E31A /* 85deC#5.wav in Resources */,
+				0663B6BB249C8BDD00B8E31A /* noteData.json in Resources */,
 				06BF4987247E53B500584858 /* LaunchScreen.storyboard in Resources */,
-				0614F071248E44F30084AD95 /* ファ.wav in Resources */,
 				06BF4984247E53B500584858 /* Preview Assets.xcassets in Resources */,
-				0614F073248E44F30084AD95 /* フィ.wav in Resources */,
-				0614F06F248E44F30084AD95 /* チ.wav in Resources */,
-				0614F076248E44F30084AD95 /* レ.wav in Resources */,
 				06BF4981247E53B500584858 /* Assets.xcassets in Resources */,
-				0614F077248E44F30084AD95 /* サ.wav in Resources */,
-				0614F06E248E44F30084AD95 /* ド.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,10 +396,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06E1DEB42493512E008D6562 /* AudioEngine.swift in Sources */,
 				06758ACC248A2CB300D4E0D2 /* TestCustomTapGesture.swift in Sources */,
+				0660B87F2499711F00FD954B /* Note.swift in Sources */,
+				0660B8852499E42C00FD954B /* UserData.swift in Sources */,
 				06BF497B247E53B300584858 /* AppDelegate.swift in Sources */,
 				06BF497D247E53B300584858 /* SceneDelegate.swift in Sources */,
 				06BF497F247E53B300584858 /* ContentView.swift in Sources */,
+				06E1DD9D248F91CF008D6562 /* Key.swift in Sources */,
+				0660B8822499E37500FD954B /* Data.swift in Sources */,
+				0663B6BD249C992300B8E31A /* KeyInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +413,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06BF4992247E53B500584858 /* DoremiPianoTests.swift in Sources */,
+				06E1DDE424904F7E008D6562 /* DoremiPianoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +609,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DoremiPianoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
@@ -542,6 +620,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kk.DoremiPianoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DoremiPiano.app/DoremiPiano";
@@ -553,6 +632,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = DoremiPianoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
