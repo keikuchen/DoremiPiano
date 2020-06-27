@@ -12,8 +12,8 @@ struct Key: View {
     let textColor: Color
     let width: CGFloat
     let height: CGFloat
-    let movableDoName: String
     let fixedDoName: String
+    let movableDoName: String
     
     var body: some View {
         Group {
@@ -23,10 +23,10 @@ struct Key: View {
             } else {
                 VStack {
                     Spacer()
-                    Text(movableDoName)
-                        .foregroundColor(textColor)
                     Text(fixedDoName)
                         .foregroundColor(Color.gray)
+                    Text(movableDoName)
+                        .foregroundColor(textColor)
                 }
                 .frame(width: width, height: height)
                 .background(keyColor)
@@ -47,15 +47,15 @@ struct Key_Previews: PreviewProvider {
                     textColor: Color.black,
                     width: 40,
                     height: 150,
-                    movableDoName: "ファ",
-                    fixedDoName: "F#/G♭"
+                    fixedDoName: "F#/G♭",
+                    movableDoName: "ファ"
                 )
                 Key(keyColor: Color.black,
                     textColor: Color.white,
                     width: 20,
                     height: 100,
-                    movableDoName: "フィ",
-                    fixedDoName: ""
+                    fixedDoName: "",
+                    movableDoName: "フィ"
                 )
             }
             ZStack(alignment: .top) {
@@ -63,15 +63,15 @@ struct Key_Previews: PreviewProvider {
                     textColor: Color.black,
                     width: 40,
                     height: 150,
-                    movableDoName: "ファ",
-                    fixedDoName: "F#/G♭"
+                    fixedDoName: "F#/G♭",
+                    movableDoName: "ファ"
                 )
                 Key(keyColor: Color.black,
                     textColor: Color.white,
                     width: 20,
                     height: 100,
-                    movableDoName: "",
-                    fixedDoName: ""
+                    fixedDoName: "",
+                    movableDoName: ""
                 )
             }
         }

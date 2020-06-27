@@ -1,5 +1,5 @@
 //
-//  TestCustomTapGesture.swift
+//  CustomTapGesture.swift
 //  DoremiPiano
 //
 //  Created by Kei Kashi on 2020/06/05.
@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-class MyTapGesture : UITapGestureRecognizer {
+class MyTapGesture: UITapGestureRecognizer {
 
     var didBeginTouch: (()->Void)?
     var didEndTouch: (()->Void)?
@@ -28,29 +28,33 @@ class MyTapGesture : UITapGestureRecognizer {
         super.touchesEnded(touches, with: event)
         self.didEndTouch?()
     }
+    
+    override func reset() {
+        super.reset()
+        self.didEndTouch?()
+    }
 }
 
 struct TouchesHandler: UIViewRepresentable {
     var didBeginTouch: (()->Void)?
     var didEndTouch: (()->Void)?
-
-    func makeUIView(context: UIViewRepresentableContext<TouchesHandler>) -> UIView {
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator()
+    }
+    
+    func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
         view.isUserInteractionEnabled = true
         view.addGestureRecognizer(context.coordinator.makeGesture(didBegin: didBeginTouch, didEnd: didEndTouch))
         return view
     }
 
-    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<TouchesHandler>) {
-    }
-
-    func makeCoordinator() -> Coordinator {
-        return Coordinator()
+    func updateUIView(_ uiView: UIView, context: Context) {
     }
 
     class Coordinator {
-        @objc
-        func action(_ sender: Any?) {
+        @objc func action(_ sender: Any?) {
             print("Tapped!")
         }
 
@@ -58,10 +62,9 @@ struct TouchesHandler: UIViewRepresentable {
             MyTapGesture(target: self, action: #selector(self.action(_:)), didBeginTouch: didBegin, didEndTouch: didEnd)
         }
     }
-    typealias UIViewType = UIView
 }
 
-struct TestCustomTapGesture: View {
+struct CustomTapGesture: View {
     var body: some View {
         Text("Hello, World!")
             .padding()
@@ -74,8 +77,8 @@ struct TestCustomTapGesture: View {
     }
 }
 
-struct TestCustomTapGesture_Previews: PreviewProvider {
+struct CustomTapGesture_Previews: PreviewProvider {
     static var previews: some View {
-        TestCustomTapGesture()
+        CustomTapGesture()
     }
 }

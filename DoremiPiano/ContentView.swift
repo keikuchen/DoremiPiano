@@ -6,71 +6,81 @@
 //
 
 import SwiftUI
-import AVKit
+import AVFoundation
 
 struct ContentView: View {
     @EnvironmentObject var userData: UserData
-    @State var pitch = 0
+    @State private var pitch: Double = 0
+    @State private var isChanging = false
 
     var body: some View {
         var engines = [Int:AudioEngine]()
-        for note in userData.notes {
-            let defaultPitch = note.defaultRole - note.audioPitch
-            engines.updateValue(
-                AudioEngine(audioFileName: note.audioName, audioFileType: "wav", defaultPitch: defaultPitch),
-                forKey: note.defaultRole
-            )
+        if !isChanging {
+            print("body start")
+            for note in userData.notes {
+                let defaultPitch = Float(note.defaultRole) - note.audioPitch
+                let audioEngine = AudioEngine(file: note.audio, defaultPitch: defaultPitch)
+                audioEngine.start()
+                engines.updateValue(audioEngine, forKey: note.defaultRole)
+            }
         }
         
-        return ZStack(alignment: .bottom) {
-            Color(red: 64.0 / 255, green: 64.0 / 255, blue: 64.0 / 255)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                Stepper(value: $pitch, in: -12...12) {
-                    Text("Pitch: \(pitch)")
-                }
-
-                ZStack(alignment: .top) {
-                    HStack(spacing: 0.0) {
-                        ForEach(longerKeyNumbers, id: \.self) { noteNumber in
-                            Key(keyColor: Color.white,
-                                textColor: Color.black,
-                                width: 46,
-                                height: 150,
-                                movableDoName: movableDoNotes[noteNumber] ?? "",
-                                fixedDoName: fixedDoNotes[self.mod12(noteNumber: noteNumber)]
-                            )
-                            .overlay(TouchesHandler(
-                                didBeginTouch: {
-                                    print(">> did begin")
-                                    engines[noteNumber]?.play(pitch: self.pitch)
-                                },
-                                didEndTouch: {
-                                    print(">> did end")
-                                    engines[noteNumber]?.stop()
-                                }
-                            ))
-                        }
+        return GeometryReader { geometry in
+            ZStack(alignment: .bottom) {
+                Color(red: 64.0 / 255, green: 64.0 / 255, blue: 64.0 / 255)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Text("Pitch\n\(Int(self.pitch))")
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.center)
+                    Slider(value: self.$pitch, in: -12...12, step: 1) { isChanging in
+                        self.isChanging = isChanging
                     }
-                    HStack(spacing: 23.0) {
-                        ForEach(shorterKeyNumbers, id: \.self) { noteNumber in
-                            Key(keyColor: Color.black,
-                                textColor: Color.white,
-                                width: 23,
-                                height: 100,
-                                movableDoName: movableDoNotes[noteNumber] ?? "",
-                                fixedDoName: fixedDoNotes[self.mod12(noteNumber: noteNumber)]
-                            )
-                            .overlay(TouchesHandler(
-                                didBeginTouch: {
-                                    print(">> did begin")
-                                    engines[noteNumber]?.play(pitch: self.pitch)
-                                },
-                                didEndTouch: {
-                                    print(">> did end")
-                                    engines[noteNumber]?.stop()
-                                }
-                            ))
+
+                    ZStack(alignment: .top) {
+                        // Longer Keys
+                        HStack(spacing: 0.0) {
+                            ForEach(longerKeyNumbers, id: \.self) { noteNumber in
+                                Key(keyColor: Color.white,
+                                    textColor: Color.black,
+                                    width: geometry.size.width / CGFloat(longerKeyNumbers.count),
+                                    height: geometry.size.height / 2,
+                                    fixedDoName: fixedDoNotes[self.indexOfScale(noteNumber: noteNumber)],
+                                    movableDoName: movableDoNotes[noteNumber] ?? ""
+                                )
+                                .overlay(TouchesHandler(
+                                    didBeginTouch: {
+                                        print(">> did begin")
+                                        engines[noteNumber]?.play(pitch: Int(self.pitch))
+                                    },
+                                    didEndTouch: {
+                                        print(">> did end")
+                                        engines[noteNumber]?.stop()
+                                    }
+                                ))
+                            }
+                        }
+                        // Shorter Keys
+                        HStack(spacing: geometry.size.width / (CGFloat(longerKeyNumbers.count) * 2)) {
+                            ForEach(shorterKeyNumbers, id: \.self) { noteNumber in
+                                Key(keyColor: Color.black,
+                                    textColor: Color.white,
+                                    width: geometry.size.width / (CGFloat(longerKeyNumbers.count) * 2),
+                                    height: geometry.size.height / 3,
+                                    fixedDoName: fixedDoNotes[self.indexOfScale(noteNumber: noteNumber)],
+                                    movableDoName: movableDoNotes[noteNumber] ?? ""
+                                )
+                                .overlay(TouchesHandler(
+                                    didBeginTouch: {
+                                        print(">> did begin")
+                                        engines[noteNumber]?.play(pitch: Int(self.pitch))
+                                    },
+                                    didEndTouch: {
+                                        print(">> did end")
+                                        engines[noteNumber]?.stop()
+                                    }
+                                ))
+                            }
                         }
                     }
                 }
@@ -78,12 +88,13 @@ struct ContentView: View {
         }
     }
     
-    func mod12(noteNumber: Int) -> Int {
-        var result = Int(Float(noteNumber + self.pitch).truncatingRemainder(dividingBy: 12))
-        if result < 0 {
-            result = 0
+    private func indexOfScale(noteNumber: Int) -> Int {
+        let shiftedNumber = Float(noteNumber + Int(self.pitch))
+        if shiftedNumber < 0 {
+            return 0
         }
-        return result
+        let numberOfNotes: Float = 12
+        return Int(shiftedNumber.truncatingRemainder(dividingBy: numberOfNotes))
     }
 }
 
