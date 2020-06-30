@@ -45,7 +45,6 @@
 		06BF4987247E53B500584858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06BF4985247E53B500584858 /* LaunchScreen.storyboard */; };
 		06BF499D247E53B500584858 /* DoremiPianoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF499C247E53B500584858 /* DoremiPianoUITests.swift */; };
 		06E1DD9D248F91CF008D6562 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1DD9C248F91CF008D6562 /* Key.swift */; };
-		06E1DDE424904F7E008D6562 /* DoremiPianoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1DDE324904F7E008D6562 /* DoremiPianoTests.swift */; };
 		06E1DEB42493512E008D6562 /* AudioEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06E1DEB32493512E008D6562 /* AudioEngine.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +110,6 @@
 		06BF499C247E53B500584858 /* DoremiPianoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoremiPianoUITests.swift; sourceTree = "<group>"; };
 		06BF499E247E53B500584858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		06E1DD9C248F91CF008D6562 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		06E1DDE324904F7E008D6562 /* DoremiPianoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoremiPianoTests.swift; sourceTree = "<group>"; };
 		06E1DEB32493512E008D6562 /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +174,7 @@
 				0660B8812499E37500FD954B /* Data.swift */,
 				0660B8842499E42C00FD954B /* UserData.swift */,
 				0660B87E2499711F00FD954B /* Note.swift */,
+				0663B6BC249C992300B8E31A /* KeyInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,10 +205,9 @@
 				06BF4988247E53B500584858 /* Info.plist */,
 				06BF497A247E53B300584858 /* AppDelegate.swift */,
 				06BF497C247E53B300584858 /* SceneDelegate.swift */,
-				06E1DEB32493512E008D6562 /* AudioEngine.swift */,
 				06BF497E247E53B300584858 /* ContentView.swift */,
 				06E1DD9C248F91CF008D6562 /* Key.swift */,
-				0663B6BC249C992300B8E31A /* KeyInfo.swift */,
+				06E1DEB32493512E008D6562 /* AudioEngine.swift */,
 				06758ACB248A2CB300D4E0D2 /* CustomTapGesture.swift */,
 				06BF4980247E53B500584858 /* Assets.xcassets */,
 				06BF4985247E53B500584858 /* LaunchScreen.storyboard */,
@@ -231,7 +229,6 @@
 		06BF4990247E53B500584858 /* DoremiPianoTests */ = {
 			isa = PBXGroup;
 			children = (
-				06E1DDE324904F7E008D6562 /* DoremiPianoTests.swift */,
 				06BF4993247E53B500584858 /* Info.plist */,
 				061B13AF24A317100058FB86 /* AudioEngineTests.swift */,
 				061B13B324A35F4F0058FB86 /* sample.mp3 */,
@@ -421,7 +418,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				061B13B024A317100058FB86 /* AudioEngineTests.swift in Sources */,
-				06E1DDE424904F7E008D6562 /* DoremiPianoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +617,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ND5RW66PP;
 				INFOPLIST_FILE = DoremiPianoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -644,6 +641,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ND5RW66PP;
 				INFOPLIST_FILE = DoremiPianoTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -664,6 +662,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ND5RW66PP;
 				INFOPLIST_FILE = DoremiPianoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -683,6 +682,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4ND5RW66PP;
 				INFOPLIST_FILE = DoremiPianoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

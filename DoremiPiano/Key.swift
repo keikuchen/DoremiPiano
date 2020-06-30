@@ -14,10 +14,11 @@ struct Key: View {
     let height: CGFloat
     let fixedDoName: String
     let movableDoName: String
+    let isBlank: Bool
     
     var body: some View {
         Group {
-            if movableDoName == "" {
+            if isBlank {
                 Text("")
                     .frame(width: width, height: height)
             } else {
@@ -47,15 +48,17 @@ struct Key_Previews: PreviewProvider {
                     textColor: Color.black,
                     width: 40,
                     height: 150,
-                    fixedDoName: "F#/G♭",
-                    movableDoName: "ファ"
+                    fixedDoName: "F",
+                    movableDoName: "ファ",
+                    isBlank: false
                 )
                 Key(keyColor: Color.black,
                     textColor: Color.white,
                     width: 20,
                     height: 100,
-                    fixedDoName: "",
-                    movableDoName: "フィ"
+                    fixedDoName: "F#",
+                    movableDoName: "ﾌｨ",
+                    isBlank: false
                 )
             }
             ZStack(alignment: .top) {
@@ -63,15 +66,17 @@ struct Key_Previews: PreviewProvider {
                     textColor: Color.black,
                     width: 40,
                     height: 150,
-                    fixedDoName: "F#/G♭",
-                    movableDoName: "ファ"
+                    fixedDoName: "F#",
+                    movableDoName: "ファ",
+                    isBlank: false
                 )
                 Key(keyColor: Color.black,
                     textColor: Color.white,
                     width: 20,
                     height: 100,
                     fixedDoName: "",
-                    movableDoName: ""
+                    movableDoName: "",
+                    isBlank: true
                 )
             }
         }

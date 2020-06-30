@@ -8,77 +8,90 @@
 import SwiftUI
 import UIKit
 
-class MyTapGesture: UITapGestureRecognizer {
+class CustomTapGesture: UITapGestureRecognizer {
+    var target: TapReactiveCoordinator? = nil
+    var touchesBegan: (()->Void)?
+    var touchesEnded: (()->Void)?
 
-    var didBeginTouch: (()->Void)?
-    var didEndTouch: (()->Void)?
-
-    init(target: Any?, action: Selector?, didBeginTouch: (()->Void)? = nil, didEndTouch: (()->Void)? = nil) {
+    init(target: Any?, action: Selector?, touchesBegan: (()->Void)? = nil, touchesEnded: (()->Void)? = nil) {
         super.init(target: target, action: action)
-        self.didBeginTouch = didBeginTouch
-        self.didEndTouch = didEndTouch
+        if target is TapReactiveCoordinator {
+            self.target = (target as! TapReactiveCoordinator)
+        }
+        self.touchesBegan = touchesBegan
+        self.touchesEnded = touchesEnded
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {
         super.touchesBegan(touches, with: event)
-        self.didBeginTouch?()
-    }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
-        super.touchesEnded(touches, with: event)
-        self.didEndTouch?()
+        self.touchesBegan?()
+        self.target?.touchesBegan()
     }
     
+    // Use "reset" instead of "touchesEnded" to call it after "touchesBegan" abusolutely.
     override func reset() {
         super.reset()
-        self.didEndTouch?()
+        self.touchesEnded?()
+        self.target?.touchesEnded()
     }
+    
+//    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent) {
+//        super.touchesEnded(touches, with: event)
+//        self.touchesEnded?()
+//        self.target?.touchesEnded()
+//    }
 }
 
-struct TouchesHandler: UIViewRepresentable {
-    var didBeginTouch: (()->Void)?
-    var didEndTouch: (()->Void)?
+struct CustomTapGestureHandler: UIViewRepresentable {
+    var touchesBegan: (()->Void)?
+    var touchesEnded: (()->Void)?
+    @State var color = UIColor.clear
     
     func makeCoordinator() -> Coordinator {
-        Coordinator()
+        Coordinator(self)
     }
     
     func makeUIView(context: Context) -> UIView {
         let view = UIView(frame: .zero)
-        view.isUserInteractionEnabled = true
-        view.addGestureRecognizer(context.coordinator.makeGesture(didBegin: didBeginTouch, didEnd: didEndTouch))
+        view.alpha = 0.7
+        view.addGestureRecognizer(context.coordinator.makeGesture(touchesBegan: touchesBegan, touchesEnded: touchesEnded))
         return view
     }
 
     func updateUIView(_ uiView: UIView, context: Context) {
+        uiView.backgroundColor = color
     }
-
-    class Coordinator {
+    
+    class Coordinator: TapReactiveCoordinator {
+        var parent: CustomTapGestureHandler
+        
+        init(_ pageViewController: CustomTapGestureHandler) {
+            self.parent = pageViewController
+        }
+        
         @objc func action(_ sender: Any?) {
-            print("Tapped!")
         }
 
-        func makeGesture(didBegin: (()->Void)?, didEnd: (()->Void)?) -> MyTapGesture {
-            MyTapGesture(target: self, action: #selector(self.action(_:)), didBeginTouch: didBegin, didEndTouch: didEnd)
+        func makeGesture(touchesBegan: (()->Void)?, touchesEnded: (()->Void)?) -> CustomTapGesture {
+            CustomTapGesture(
+                target: self,
+                action: #selector(self.action(_:)),
+                touchesBegan: touchesBegan,
+                touchesEnded: touchesEnded
+            )
+        }
+        
+        func touchesBegan() {
+            parent.color = UIColor.gray
+        }
+        
+        func touchesEnded() {
+            parent.color = UIColor.clear
         }
     }
 }
 
-struct CustomTapGesture: View {
-    var body: some View {
-        Text("Hello, World!")
-            .padding()
-            .background(Color.yellow)
-            .overlay(TouchesHandler(didBeginTouch: {
-                print(">> did begin")
-            }, didEndTouch: {
-                print("<< did end")
-            }))
-    }
-}
-
-struct CustomTapGesture_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomTapGesture()
-    }
+protocol TapReactiveCoordinator {
+    func touchesBegan()
+    func touchesEnded()
 }

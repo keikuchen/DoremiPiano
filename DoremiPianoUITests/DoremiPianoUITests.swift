@@ -8,35 +8,50 @@
 import XCTest
 
 class DoremiPianoUITests: XCTestCase {
+    
+    let app = XCUIApplication()
+    var keyParent: XCUIElement!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app.launch()
+        
+        keyParent = try XCTUnwrap(app
+            .children(matching: .window).element(boundBy: 0)
+            .children(matching: .other).element
+            .children(matching: .other).element
+            .children(matching: .other).element)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
-            }
+    
+    func testAudio() throws {
+        var keys: [XCUIElement] = []
+        for i in 0...24 {
+            keys.append(keyParent.children(matching: .other).element(boundBy: i))
+            keys[i].press(forDuration: 0.3)
         }
+    }
+    
+    func testSliderChange() throws {
+        let fiKey = keyParent.children(matching: .other).element(boundBy: 19)
+        let laKey = keyParent.children(matching: .other).element(boundBy: 8)
+        
+        
+        fiKey.press(forDuration: 0.3)
+        laKey.press(forDuration: 0.3)
+        app.sliders["50%"].adjust(toNormalizedSliderPosition: 0.54)
+        fiKey.press(forDuration: 0.3)
+        laKey.press(forDuration: 0.3)
+        app.sliders["54%"].adjust(toNormalizedSliderPosition: 1.0)
+        fiKey.press(forDuration: 0.3)
+        laKey.press(forDuration: 0.3)
+        app.sliders["100%"].adjust(toNormalizedSliderPosition: 0)
+        fiKey.press(forDuration: 0.3)
+        laKey.press(forDuration: 0.3)
+        app.sliders["0%"].adjust(toNormalizedSliderPosition: 0.5)
+        fiKey.press(forDuration: 0.3)
+        laKey.press(forDuration: 0.3)
     }
 }

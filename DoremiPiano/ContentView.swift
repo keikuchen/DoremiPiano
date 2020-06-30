@@ -15,8 +15,8 @@ struct ContentView: View {
 
     var body: some View {
         var engines = [Int:AudioEngine]()
+        
         if !isChanging {
-            print("body start")
             for note in userData.notes {
                 let defaultPitch = Float(note.defaultRole) - note.audioPitch
                 let audioEngine = AudioEngine(file: note.audio, defaultPitch: defaultPitch)
@@ -27,7 +27,7 @@ struct ContentView: View {
         
         return GeometryReader { geometry in
             ZStack(alignment: .bottom) {
-                Color(red: 64.0 / 255, green: 64.0 / 255, blue: 64.0 / 255)
+                Color.gray
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Text("Pitch\n\(Int(self.pitch))")
@@ -45,16 +45,17 @@ struct ContentView: View {
                                     textColor: Color.black,
                                     width: geometry.size.width / CGFloat(longerKeyNumbers.count),
                                     height: geometry.size.height / 2,
-                                    fixedDoName: fixedDoNotes[self.indexOfScale(noteNumber: noteNumber)],
-                                    movableDoName: movableDoNotes[noteNumber] ?? ""
+                                    fixedDoName: fixedDoNote(noteNumber: noteNumber + Int(self.pitch)),
+                                    movableDoName: movableDoNote(noteNumber: noteNumber),
+                                    isBlank: false
                                 )
-                                .overlay(TouchesHandler(
-                                    didBeginTouch: {
-                                        print(">> did begin")
+                                .overlay(CustomTapGestureHandler(
+                                    touchesBegan: {
+                                        print("touch began")
                                         engines[noteNumber]?.play(pitch: Int(self.pitch))
                                     },
-                                    didEndTouch: {
-                                        print(">> did end")
+                                    touchesEnded: {
+                                        print("touch ended")
                                         engines[noteNumber]?.stop()
                                     }
                                 ))
@@ -67,16 +68,17 @@ struct ContentView: View {
                                     textColor: Color.white,
                                     width: geometry.size.width / (CGFloat(longerKeyNumbers.count) * 2),
                                     height: geometry.size.height / 3,
-                                    fixedDoName: fixedDoNotes[self.indexOfScale(noteNumber: noteNumber)],
-                                    movableDoName: movableDoNotes[noteNumber] ?? ""
+                                    fixedDoName: fixedDoNote(noteNumber: noteNumber + Int(self.pitch)),
+                                    movableDoName: movableDoNote(noteNumber: noteNumber),
+                                    isBlank: noteNumber == 0
                                 )
-                                .overlay(TouchesHandler(
-                                    didBeginTouch: {
-                                        print(">> did begin")
+                                .overlay(CustomTapGestureHandler(
+                                    touchesBegan: {
+                                        print("touch began")
                                         engines[noteNumber]?.play(pitch: Int(self.pitch))
                                     },
-                                    didEndTouch: {
-                                        print(">> did end")
+                                    touchesEnded: {
+                                        print("touch ended")
                                         engines[noteNumber]?.stop()
                                     }
                                 ))
@@ -86,15 +88,6 @@ struct ContentView: View {
                 }
             }
         }
-    }
-    
-    private func indexOfScale(noteNumber: Int) -> Int {
-        let shiftedNumber = Float(noteNumber + Int(self.pitch))
-        if shiftedNumber < 0 {
-            return 0
-        }
-        let numberOfNotes: Float = 12
-        return Int(shiftedNumber.truncatingRemainder(dividingBy: numberOfNotes))
     }
 }
 
