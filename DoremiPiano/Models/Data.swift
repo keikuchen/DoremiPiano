@@ -1,10 +1,3 @@
-//
-//  Data.swift
-//  DoremiPiano
-//
-//  Created by Kei Kashi on 2020/06/17.
-//
-
 import AVFoundation
 
 let noteData: [Note] = load("noteData.json")

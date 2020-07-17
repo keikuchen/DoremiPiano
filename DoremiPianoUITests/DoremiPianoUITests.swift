@@ -1,10 +1,3 @@
-//
-//  DoremiPianoUITests.swift
-//  DoremiPianoUITests
-//
-//  Created by Kei Kashi on 2020/05/27.
-//
-
 import XCTest
 
 class DoremiPianoUITests: XCTestCase {

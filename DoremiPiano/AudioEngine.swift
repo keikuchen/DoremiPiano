@@ -1,10 +1,3 @@
-//
-//  AudioEngine.swift
-//  DoremiPiano
-//
-//  Created by Kei Kashi on 2020/06/12.
-//
-
 import AVFoundation
 
 class AudioEngine {

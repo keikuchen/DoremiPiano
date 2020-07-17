@@ -1,10 +1,3 @@
-//
-//  Note.swift
-//  DoremiPiano
-//
-//  Created by Kei Kashi on 2020/06/17.
-//
-
 import AVFoundation
 
 struct Note: Hashable, Codable, Identifiable {

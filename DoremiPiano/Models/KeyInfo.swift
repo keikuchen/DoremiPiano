@@ -1,10 +1,3 @@
-//
-//  KeyInfo.swift
-//  DoremiPiano
-//
-//  Created by Kei Kashi on 2020/06/19.
-//
-
 let longerKeyNumbers = [67, 69, 71, 72, 74, 76, 77, 79, 81, 83, 84, 86, 88]
 let shorterKeyNumbers = [68, 70, 0, 73, 75, 0, 78, 80, 82, 0, 85, 87]
 

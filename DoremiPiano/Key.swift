@@ -1,10 +1,3 @@
-//
-//  Key.swift
-//  DoremiPiano
-//
-//  Created by Kei Kashi on 2020/06/09.
-//
-
 import SwiftUI
 
 struct Key: View {

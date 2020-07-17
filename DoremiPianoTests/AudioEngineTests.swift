@@ -1,10 +1,3 @@
-//
-//  AudioEngineTests.swift
-//  DoremiPianoTests
-//
-//  Created by Kei Kashi on 2020/06/24.
-//
-
 import XCTest
 @testable import DoremiPiano
 import AVFoundation
