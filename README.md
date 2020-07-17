@@ -14,3 +14,5 @@ It makes the sound of voices based on the method of movable do solfège.
 
 # License
 DoremiPiano is released under the MIT License.
+
+Audio resources are from: [momone voice archive](https://w.atwiki.jp/momonemomo/pages/39.html)
