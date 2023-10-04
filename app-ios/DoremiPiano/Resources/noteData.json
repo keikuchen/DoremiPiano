@@ -1,0 +1,156 @@
+[
+    {
+        "id": 67,
+        "audioName": "67soA3",
+        "type": "wav",
+        "audioPitch": 69.3,
+        "defaultRole": 67
+    },
+    {
+        "id": 68,
+        "audioName": "68saA3",
+        "type": "wav",
+        "audioPitch": 69.1,
+        "defaultRole": 68
+    },
+    {
+        "id": 69,
+        "audioName": "69laA3",
+        "type": "wav",
+        "audioPitch": 68.8,
+        "defaultRole": 69
+    },
+    {
+        "id": 70,
+        "audioName": "70chiA3",
+        "type": "wav",
+        "audioPitch": 69.7,
+        "defaultRole": 70
+    },
+    {
+        "id": 71,
+        "audioName": "71siC#4",
+        "type": "wav",
+        "audioPitch": 72.9,
+        "defaultRole": 71
+    },
+    {
+        "id": 72,
+        "audioName": "72doC#4",
+        "type": "wav",
+        "audioPitch": 72.65,
+        "defaultRole": 72
+    },
+    {
+        "id": 73,
+        "audioName": "73deC#4",
+        "type": "wav",
+        "audioPitch": 72.4,
+        "defaultRole": 73
+    },
+    {
+        "id": 74,
+        "audioName": "74reC#4",
+        "type": "wav",
+        "audioPitch": 72.5,
+        "defaultRole": 74
+    },
+    {
+        "id": 75,
+        "audioName": "75riC#4",
+        "type": "wav",
+        "audioPitch": 72.7,
+        "defaultRole": 75
+    },
+    {
+        "id": 76,
+        "audioName": "76miF4",
+        "type": "wav",
+        "audioPitch": 76.75,
+        "defaultRole": 76
+    },
+    {
+        "id": 77,
+        "audioName": "77faF4",
+        "type": "wav",
+        "audioPitch": 76.8,
+        "defaultRole": 77
+    },
+    {
+        "id": 78,
+        "audioName": "78fiF4",
+        "type": "wav",
+        "audioPitch": 76.8,
+        "defaultRole": 78
+    },
+    {
+        "id": 79,
+        "audioName": "79soF4",
+        "type": "wav",
+        "audioPitch": 76.35,
+        "defaultRole": 79
+    },
+    {
+        "id": 80,
+        "audioName": "80saA4",
+        "type": "wav",
+        "audioPitch": 80.55,
+        "defaultRole": 80
+    },
+    {
+        "id": 81,
+        "audioName": "81laA4",
+        "type": "wav",
+        "audioPitch": 80.2,
+        "defaultRole": 81
+    },
+    {
+        "id": 82,
+        "audioName": "82chiA4",
+        "type": "wav",
+        "audioPitch": 80.7,
+        "defaultRole": 82
+    },
+    {
+        "id": 83,
+        "audioName": "83siA4",
+        "type": "wav",
+        "audioPitch": 80.8,
+        "defaultRole": 83
+    },
+    {
+        "id": 84,
+        "audioName": "84doC#5",
+        "type": "wav",
+        "audioPitch": 84.2,
+        "defaultRole": 84
+    },
+    {
+        "id": 85,
+        "audioName": "85deC#5",
+        "type": "wav",
+        "audioPitch": 84.2,
+        "defaultRole": 85
+    },
+    {
+        "id": 86,
+        "audioName": "86reC#5",
+        "type": "wav",
+        "audioPitch": 84.6,
+        "defaultRole": 86
+    },
+    {
+        "id": 87,
+        "audioName": "87riC#5",
+        "type": "wav",
+        "audioPitch": 84.7,
+        "defaultRole": 87
+    },
+    {
+        "id": 88,
+        "audioName": "88miC#5",
+        "type": "wav",
+        "audioPitch": 84.7,
+        "defaultRole": 88
+    }
+]
